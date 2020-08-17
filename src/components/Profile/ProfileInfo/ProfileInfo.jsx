@@ -1,22 +1,32 @@
 import React from 'react'
-import c from './ProfileInfo.module.css'
+import ProfileItem from '../ProfileItem/ProfileItem'
 
 
 const ProfileInfo = () => {
+
+    const profileData = [
+        {
+            name: 'Alex Bell',
+            birthday: 'Birthday: 22 january',
+            city: 'City: Moscow',
+            education: 'Education:',
+            webSite: 'Web site:'
+        }
+    ]
+
+    const profileElements = profileData
+        .map((profile) =>
+            <ProfileItem
+                name={profile.name}
+                birthday={profile.birthday}
+                city={profile.city}
+                education={profile.education}
+                webSite={profile.webSite}
+            />)
+
     return (
         <div>
-            <img className={c.photo} src={require('../../../assets/img/gradient.jpg')} alt=""/>
-            <div className={c.info}>
-                <img src={require('../../../assets/img/ava.jpg')} alt=""/>
-                <ul className={c.list}>
-                    <li>Alex Bell</li>
-                    <li>Birthday: 22 january</li>
-                    <li>City: Moscow</li>
-                    <li>Education:</li>
-                    <li>Web site:</li>
-                </ul>
-            </div>
-            <br/>
+            {profileElements}
         </div>
     )
 }
