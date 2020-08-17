@@ -1,8 +1,8 @@
 .app-wrapper {
     display: grid;
-    grid-template-areas: 'h h' 'n c ';
-    grid-template-rows: 80px 6fr;
-    grid-template-columns: 2fr 12fr;
+    grid-template-areas: 'h h ' ' n c';
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 2fr 10fr;
     grid-gap: 2vw;
     width: 100%;
     max-width: 1200px;
@@ -10,42 +10,9 @@
     padding: 0 15px;
 }
 
-.header {
-    grid-area: h;
-    background-color: #25f56a;
-}
-
-.header img {
-    max-width: 80px;
-}
-
-.profile {
+.app-wrapper-content {
     grid-area: c;
-}
-
-.profile__info img {
-    max-width: 70px;
-}
-
-.profile__photo {
-    width: 80%;
-    height: 200px;
-    margin: 0 auto;
-
-}
-
-.profile__list {
-    list-style-type: none;
-}
-
-.navList {
-    grid-area: n;
-    background-color: #25f56a;
-}
-
-.navList ul {
-    list-style-type: none;
-    padding-left: 1rem;
+    font-size: 1.5rem;
 }
 
 

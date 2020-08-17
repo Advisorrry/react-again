@@ -1,0 +1,14 @@
+.posts {
+    grid-area: m;
+    padding: 0 1rem;
+
+}
+
+.btn {
+    display: grid;
+    justify-content: end;
+}
+
+.item {
+    padding: 1rem 0;
+}
