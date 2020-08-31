@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
-import Header from './components/Header/Header'
-import Navbar from './components/Navbar/Navbar'
-import Profile from './components/Profile/Profile'
-import Dialogs from './components/Dialogs/DIalogs'
-import {BrowserRouter, Route} from 'react-router-dom'
+import {Header} from './components/Header/Header'
+import {Navbar} from './components/Navbar/Navbar'
+import {Profile} from './components/Profile/Profile'
+import {Dialogs} from './components/Dialogs/DIalogs'
+import {Route, BrowserRouter} from 'react-router-dom'
 
 
 const App = (props) => {
@@ -19,7 +19,10 @@ const App = (props) => {
                     state={props.state.dialogsPage} /> }
                 />
                 <Route path='/profile' render={ () => <Profile
-                    state={props.state.profilePage} /> }
+                    profilePage={props.state.profilePage}
+                    addPost={props.addPost}
+                    updateNewPostText={props.updateNewPostText}
+                /> }
                 />
             </div>
         </div>

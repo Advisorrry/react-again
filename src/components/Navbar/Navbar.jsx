@@ -2,7 +2,7 @@ import React from 'react'
 import n from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <div className={n.navList}>
       <ul className={n.item}>
@@ -16,4 +16,3 @@ const Navbar = () => {
     )
 }
 
-export default Navbar

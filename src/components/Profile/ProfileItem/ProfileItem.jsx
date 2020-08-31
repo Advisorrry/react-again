@@ -1,7 +1,7 @@
 import React from 'react'
 import c from './ProfileItem.module.css'
 
-const ProfileItem = () => {
+export const ProfileItem = () => {
 
     return (
         <div>
@@ -20,5 +20,3 @@ const ProfileItem = () => {
         </div>
     )
 }
-
-export default ProfileItem

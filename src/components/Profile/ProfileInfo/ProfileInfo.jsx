@@ -1,8 +1,8 @@
 import React from 'react'
-import ProfileItem from '../ProfileItem/ProfileItem'
+import {ProfileItem} from '../ProfileItem/ProfileItem'
 
 
-const ProfileInfo = () => {
+export const ProfileInfo = () => {
 
     const profileData = [
         {
@@ -30,5 +30,3 @@ const ProfileInfo = () => {
         </div>
     )
 }
-
-export default ProfileInfo

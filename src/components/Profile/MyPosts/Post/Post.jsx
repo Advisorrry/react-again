@@ -1,7 +1,7 @@
 import React from 'react'
 import post from './Post.module.css'
 
-const Post = (props) => {
+export const Post = (props) => {
 
     return (
         <div>
@@ -15,5 +15,3 @@ const Post = (props) => {
         </div>
     )
 }
-
-export default Post

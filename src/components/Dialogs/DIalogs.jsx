@@ -5,7 +5,7 @@ import DialogItem from './Dialog/DIalogItem'
 import Message from './Message/Message'
 
 
-const Dialogs = (props) => {
+export const Dialogs = (props) => {
 
     const dialogsElements = props.state.dialogsData
         .map((dialog) => <DialogItem name={dialog.name} id={`id${dialog.id}`}/>)
@@ -30,5 +30,3 @@ const Dialogs = (props) => {
         </div>
     )
 }
-
-export default Dialogs

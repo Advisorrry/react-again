@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 
 
-const Header = () => {
+export const Header = () => {
     return (
         <div>
             <header className={h.header}>
@@ -14,4 +14,3 @@ const Header = () => {
     )
 }
 
-export default Header
