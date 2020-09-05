@@ -25,7 +25,7 @@ export const MyPosts = (props) => {
         <div className={m.posts}>
             <h5>My posts</h5>
             <input ref={newPostElement} onChange={onPostChange} value={props.newPostText} type="text"/>
-            <button onClick={addPost} className="btn waves-effect waves-light" type="submit" name="action">send
+            <button onClick={addPost} className="btn waves-effect waves-light" type="submit" name="action">post
                 <i className="material-icons right">send</i>
             </button>
 
