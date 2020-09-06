@@ -3,7 +3,7 @@ import s from './Dialogs.module.css'
 // import {NavLink} from 'react-router-dom'
 import DialogItem from './Dialog/DIalogItem'
 import Message from './Message/Message'
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/state";
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/store";
 
 
 export const Dialogs = (props) => {
