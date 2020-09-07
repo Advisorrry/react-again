@@ -1,7 +1,6 @@
 import React from 'react'
 import m from './MyPosts.module.css'
 import {Post} from './Post/Post'
-import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/store'
 
 export const MyPosts = (props) => {
 
@@ -10,22 +9,21 @@ export const MyPosts = (props) => {
 
     const newPostElement = React.createRef()
 
-    const addPost = () => {
-        props.dispatch(addPostActionCreator())
+    const onAddPost = () => {
+        props.addPost()
 
     }
 
     const onPostChange = () => {
         const text = newPostElement.current.value
-        const action = updateNewPostTextActionCreator(text)
-        props.dispatch(action)
+        props.updateNewPostText(text)
     }
 
     return (
         <div className={m.posts}>
             <h5>My posts</h5>
-            <input ref={newPostElement} onChange={onPostChange} value={props.newPostText} type="text"/>
-            <button onClick={addPost} className="btn waves-effect waves-light" type="submit" name="action">post
+            <input ref={newPostElement} onChange={ onPostChange } value={props.newPostText} type="text"/>
+            <button onClick={ onAddPost } className="btn waves-effect waves-light" type="submit" name="action">post
                 <i className="material-icons right">send</i>
             </button>
 
