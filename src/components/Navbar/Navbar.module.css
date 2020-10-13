@@ -1,6 +1,6 @@
 .navList {
     grid-area: n;
-    background-color: #25f56a;
+    background-color: #002137;
     padding-left: 1rem;
 }
 
@@ -8,3 +8,4 @@
     list-style-type: none;
     font-size: 1.5rem;
 }
+

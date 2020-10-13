@@ -1,9 +1,10 @@
 .header {
     display: grid;
     grid-area: h;
-    background-color: #25f56a;
+    background-color: #002137;
 }
 
 .header img {
-    max-width: 80px;
+    max-width: 180px;
+
 }

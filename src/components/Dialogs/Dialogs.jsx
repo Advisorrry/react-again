@@ -9,11 +9,11 @@ export const Dialogs = (props) => {
     const state = props.dialogsPage
 
     const dialogsElements = state.dialogsData
-        .map((dialog) => <DialogItem name={dialog.name} id={`id${dialog.id}`}/>)
+        .map((dialog) => <DialogItem name={dialog.name} key={dialog.name} id={`id${dialog.id}`}/>)
 
 
     const messagesElements = state.messagesData
-        .map((message) => <Message text={message.text}/>)
+        .map((message) => <Message text={message.text} key={message.text}/>)
 
     const newMessageBody = state.newMessagesBody
 
