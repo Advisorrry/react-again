@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 600px;
     height: 200px;
-    margin-bottom: 15px;
+    margin: 0 auto;
 }
 
 .block__info {
@@ -13,17 +13,16 @@
 
 .usersPhoto {
     display: flex;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
     margin-right: 15px;
 }
 .follow {
     margin-top: 10px;
-    max-width: 90px;
+    max-width: 100px;
     text-align: center;
-    border: 1px solid #25f56a;
-    background-color: #25f56a;
+    background-color: #002137;
     border-radius: 6px;
 }
 
@@ -37,7 +36,7 @@
     display: flex;
     justify-content: space-between;
     width: 500px;
-    height: 70px;
+    height: 100px;
     border: 1px solid #7f4870;
     border-radius: 5px;
 }
@@ -45,6 +44,14 @@
 .info p {
     margin: 0;
     padding: 10px;
+}
+
+.numbers__button {
+    text-align: center;
+    margin: 5px 5px;
+    padding: 5px 0;
+    background-color: #1071ff;
+
 }
 
 a.blubtn {
@@ -72,4 +79,26 @@ a.blubtn:active {
     border: #54ff9f 1px solid;
     transition: .07s;
     background-color: #FFF;
+}
+
+
+
+.activeBtn {
+    background-color: #77DDE7;
+}
+.firstButton {
+
+}
+
+.lastButton {
+
+}
+
+.numbers__button span {
+    cursor: pointer;
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-right: 12px;
+    color: white;
 }
