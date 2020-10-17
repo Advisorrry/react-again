@@ -63,6 +63,7 @@ export class Users extends React.Component {
                     })}
             </div>
             {
+
                 this.props.users.map(u => <div key={u.id}>
                     <div className={us.block}>
                         <div className={us.block__info}>
