@@ -2,6 +2,7 @@ import React from 'react'
 import us from './Users.module.css'
 import userPhoto from '../../assets/img/usersAvaAlexey.jpg'
 import classNames from 'classnames'
+import {NavLink} from 'react-router-dom'
 
 
 export const Users = (props) => {
@@ -46,7 +47,7 @@ export const Users = (props) => {
             props.users.map(u => <div key={u.id}>
                 <div className={us.block}>
                     <div className={us.block__info}>
-                        <img className={us.usersPhoto} alt={`logo`} src={u.photos.small != null ? u.photos.small : userPhoto  }/>
+                         <NavLink to={'/profile' + u.id }><img className={us.usersPhoto} alt={`logo`} src={u.photos.small != null ? u.photos.small : userPhoto  }/> </NavLink>
                         <div className={us.info}>
                             <p>{`Имя: ${u.name}`}<br/> {u.status != null ? u.status : `Люблю пельмешки`}</p>
                             <p>{'Прекрасная страна'}, {'Лучший город'} </p>

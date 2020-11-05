@@ -1,32 +1,28 @@
 import React from 'react'
-import {ProfileItem} from '../ProfileItem/ProfileItem'
+import {Preloader} from '../../common/Preloader'
+import c from './ProfileInfo.module.css'
 
 
-export const ProfileInfo = () => {
-
-    const profileData = [
-        {
-            name: 'Alex Bell',
-            birthday: 'Birthday: 22 january',
-            city: 'City: Moscow',
-            education: 'Education:',
-            webSite: 'Web site:'
-        }
-    ]
-
-    const profileElements = profileData
-        .map((profile) =>
-            <ProfileItem
-                name={profile.name}
-                birthday={profile.birthday}
-                city={profile.city}
-                education={profile.education}
-                webSite={profile.webSite}
-            />)
+export const ProfileInfo = (props) => {
+    if(!props.profile) {
+        return <Preloader />
+    }
 
     return (
         <div>
-            {profileElements}
+            <div>
+                <img className={c.photo} src={require('../../../assets/img/gradient.jpg')} alt=""/>
+                <div className={c.info}>
+                    <img src={props.profile.photos.large} alt=""/>
+                    <ul className={c.list}>
+                        <li>{props.profile.fullName}</li>
+                        <li>City: Moscow</li>
+                        <li>Job: {props.profile.lookingForAJobDescription}</li>
+                        <li>WebSite: <a href={3}>{props.profile.contacts.vk}</a></li>
+                    </ul>
+                </div>
+                <br/>
+            </div>
         </div>
     )
 }

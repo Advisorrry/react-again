@@ -42,7 +42,7 @@ export const store = {
     },
 
     _callSubscriber() {
-        console.log('state chnged')
+        console.log('state changed')
     },
 
     subscribe(observer) {
@@ -76,7 +76,7 @@ export const sendMessageCreator = () => ({
 })
 
 export const updateNewMessageBodyCreator = (body) => ({
-    type: UPDATE_NEW_MESSAGES_BODY, body: body
+    type: UPDATE_NEW_MESSAGES_BODY, body
 })
 
 
