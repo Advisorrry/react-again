@@ -9,6 +9,9 @@ export const Header = () => {
         <div>
             <header className={h.header}>
                 <NavLink to="/profile"><img alt='logo' src={require('../../assets/img/Cyberpunk2077.svg')} /></NavLink>
+
+
+
             </header>
         </div>
     )
