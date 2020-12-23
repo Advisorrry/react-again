@@ -3,6 +3,7 @@ import us from './Users.module.css'
 import userPhoto from '../../assets/img/usersAvaAlexey.jpg'
 import classNames from 'classnames'
 import {NavLink} from 'react-router-dom'
+import {getFollow, getUnFollow} from '../../api/api'
 
 
 export const Users = (props) => {
@@ -58,10 +59,20 @@ export const Users = (props) => {
 
                     <a href={'#f'} className={us.follow}>{u.followed
                         ? <p onClick={() => {
-                            props.unfollow(u.id)
+                           getUnFollow(u.id).then(data => {
+                                    if (data.resultCode === 0) {
+                                        props.unfollow(u.id)
+                                    }
+                                })
+
                         }}>unfollow</p>
                         : <p onClick={() => {
-                            props.follow(u.id)
+                            getFollow(u.id).then(data => {
+                                    if (data.resultCode === 0) {
+                                        props.follow(u.id)
+                                    }
+                                })
+
                         }}>follow</p>}
                     </a>
 

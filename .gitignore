@@ -6,6 +6,7 @@
 .pnp.js
 .firebase
 debug.log
+.idea
 
 # testing
 /coverage
