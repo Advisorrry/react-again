@@ -21,9 +21,7 @@
 .follow {
     margin-top: 10px;
     max-width: 100px;
-    text-align: center;
-    background-color: #002137;
-    border-radius: 6px;
+   
 }
 
 .follow p {
@@ -37,7 +35,7 @@
     justify-content: space-between;
     width: 500px;
     height: 100px;
-    border: 1px solid #7f4870;
+    border: 1px solid #002137;
     border-radius: 5px;
 }
 
@@ -48,44 +46,36 @@
 
 .numbers__button {
     text-align: center;
-    margin: 5px 5px;
+    margin-bottom: 5px;
     padding: 5px 0;
-    background-color: #1071ff;
+    background-color: #002137;
 
 }
 
-a.blubtn {
-    width:130px;
+p button {
+    width:100px;
     text-align:center;
     display:block;
     text-decoration: none;
     font-size: 15px;
-    border: #1071FF 1px solid;
-    color: #1071FF;
+    border: #00416a 1px solid;
+    color: #1a4876;
     padding: 10px 10px;
     margin: 20px auto;
     transition: .5s;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #daeaf7;
 }
-a.blubtn:hover {
+p button:hover {
     top: 5px;
     transition: .2s;
-    color: #1071FF;
-    border: #54ff9f 1px solid;
+    color: #1a4876;
+    border: #00416a 1px solid;
     border-radius: 10px;
-}
-a.blubtn:active {
-    color: #000;
-    border: #54ff9f 1px solid;
-    transition: .07s;
-    background-color: #FFF;
+    cursor: pointer;
 }
 
 
-
-.activeBtn {
-    background-color: #77DDE7;
-}
 .firstButton {
 
 }
@@ -100,5 +90,5 @@ a.blubtn:active {
     border-radius: 5px;
     padding: 0 5px;
     margin-right: 12px;
-    color: white;
+    color: #ffdc33;
 }

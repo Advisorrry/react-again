@@ -1,6 +1,6 @@
 import * as axios from 'axios'
 
-const API_KEY = '85b12e69-88ec-4f5a-bc63-9b6225700c28'
+const API_KEY = '4bcc9283-2b74-4bee-8631-165bfd021180'
 const baseUrl = 'https://social-network.samuraijs.com/api/1.0/'
 
 const instance = axios.create({

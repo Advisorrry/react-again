@@ -9,6 +9,9 @@
     list-style-type: none;
     font-size: 1.5rem;
 }
+li a {
+    color: #ffdc33;
+}
 
 .login__block {
     margin-top: 1.5rem;

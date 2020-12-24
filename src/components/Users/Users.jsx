@@ -57,24 +57,28 @@ export const Users = (props) => {
                     </div>
 
 
-                    <a href={'#f'} className={us.follow}>{u.followed
-                        ? <p onClick={() => {
+                    <p className={us.follow}>{u.followed
+                        ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                            props.toggleFollowingProgress(true, u.id)
                            getUnFollow(u.id).then(data => {
                                     if (data.resultCode === 0) {
                                         props.unfollow(u.id)
                                     }
+                               props.toggleFollowingProgress(false, u.id)
                                 })
 
-                        }}>unfollow</p>
-                        : <p onClick={() => {
+                        }}>unfollow</button>
+                        : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                            props.toggleFollowingProgress(true, u.id)
                             getFollow(u.id).then(data => {
                                     if (data.resultCode === 0) {
                                         props.follow(u.id)
                                     }
+                                props.toggleFollowingProgress(false, u.id)
                                 })
 
-                        }}>follow</p>}
-                    </a>
+                        }}>follow</button>}
+                    </p>
 
                 </div>
 
