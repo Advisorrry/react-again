@@ -43,6 +43,13 @@
     margin: 0;
     padding: 10px;
 }
+.firstButton {
+
+}
+
+.lastButton {
+
+}
 
 .numbers__button {
     text-align: center;
@@ -76,19 +83,13 @@ p button:hover {
 }
 
 
-.firstButton {
-
-}
-
-.lastButton {
-
-}
 
 .numbers__button span {
     cursor: pointer;
     border: solid 1px white;
     border-radius: 5px;
     padding: 0 5px;
-    margin-right: 12px;
+    margin-left: 12px;
     color: #ffdc33;
 }
+

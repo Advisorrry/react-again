@@ -12,9 +12,13 @@
 li a {
     color: #ffdc33;
 }
+.item a.active {
+    color: #fff;
+}
 
 .login__block {
     margin-top: 1.5rem;
 }
+
 
 

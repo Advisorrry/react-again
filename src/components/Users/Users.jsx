@@ -3,7 +3,6 @@ import us from './Users.module.css'
 import userPhoto from '../../assets/img/usersAvaAlexey.jpg'
 import classNames from 'classnames'
 import {NavLink} from 'react-router-dom'
-import {getFollow, getUnFollow} from '../../api/api'
 
 
 export const Users = (props) => {
@@ -16,9 +15,9 @@ export const Users = (props) => {
         pages.push(i)
     }
 
-    const setPaginationBtnClasses = (p, firstButton, lastButton) => {
+    const setPaginationBtnClasses = (pageNumber, firstButton, lastButton) => {
         return classNames({
-            [us.activeBtn]: now === p,
+            [us.activeBtn]: now === pageNumber,
             [us.firstButton]: firstButton,
             [us.lastButton]: lastButton
         })
@@ -30,15 +29,14 @@ export const Users = (props) => {
         <div className={us.numbers__button}>
             {
 
-                pages.map(p => {
-                    if ((p < now + 3 && p > now - 3) ||
-                        p === 1 || p === pages.length
+                pages.map(pageNumber => {
+                    if ((pageNumber < now + 3 && pageNumber > now - 3) ||
+                        pageNumber === 1 || pageNumber === pages.length
                     ) {
-
-                        return <span key={p}
-                                     className={setPaginationBtnClasses(p, now > p + 3, p === pages.length && (now < p - 4) )}
-                                     onClick={() => { props.onPageChanged(p) }}
-                        >{p}</span>
+                        return <span key={pageNumber}
+                                     className={setPaginationBtnClasses(pageNumber, now > pageNumber + 3, pageNumber === pages.length && (now < pageNumber - 4) )}
+                                     onClick={() => { props.onPageChanged(pageNumber) }}
+                        >{pageNumber}</span>
                     } return ''
 
                 })}
@@ -58,26 +56,14 @@ export const Users = (props) => {
 
 
                     <p className={us.follow}>{u.followed
-                        ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                            props.toggleFollowingProgress(true, u.id)
-                           getUnFollow(u.id).then(data => {
-                                    if (data.resultCode === 0) {
-                                        props.unfollow(u.id)
-                                    }
-                               props.toggleFollowingProgress(false, u.id)
-                                })
+                        ? <button disabled={props.followingInProgress
+                            .some(id => id === u.id)} onClick={() => {props.unfollow(u.id)}
 
-                        }}>unfollow</button>
-                        : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                            props.toggleFollowingProgress(true, u.id)
-                            getFollow(u.id).then(data => {
-                                    if (data.resultCode === 0) {
-                                        props.follow(u.id)
-                                    }
-                                props.toggleFollowingProgress(false, u.id)
-                                })
+                            }>unfollow</button>
+                        : <button disabled={props.followingInProgress
+                            .some(id => id === u.id)} onClick={() => {props.follow(u.id)}
 
-                        }}>follow</button>}
+                            }>follow</button>}
                     </p>
 
                 </div>
