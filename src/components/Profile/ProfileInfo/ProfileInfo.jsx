@@ -1,6 +1,7 @@
 import React from 'react'
 import {Preloader} from '../../common/Preloader'
 import c from './ProfileInfo.module.css'
+import defaultPhoto from '../../../assets/img/ava.jpg'
 
 
 export const ProfileInfo = (props) => {
@@ -11,9 +12,8 @@ export const ProfileInfo = (props) => {
     return (
         <div>
             <div>
-                <img className={c.photo} src={require('../../../assets/img/gradient.jpg')} alt=""/>
                 <div className={c.info}>
-                    <img src={props.profile.photos.large} alt=""/>
+                    <img src={props.profile.photos.large != null ? props.profile.photos.large : defaultPhoto} alt=""/>
                     <ul className={c.list}>
                         <li>{props.profile.fullName}</li>
                         <li>City: Moscow</li>

@@ -1,11 +1,18 @@
+.info {
+    display: flex;
+    flex-flow: column wrap;
+
+}
 .info img {
-    max-width: 70px;
+    width: 150px;
+    border-radius: 10%;
 }
 
 .photo {
     width: 80%;
     height: 200px;
-    margin: 0 auto;
+    margin: 15px auto;
+    border-radius: 5px;
 
 }
 

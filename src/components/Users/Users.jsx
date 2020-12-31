@@ -1,11 +1,36 @@
+import randomPhoto1 from '../../assets/randomPhotos/randomPhoto1.jpg'
+import randomPhoto2 from '../../assets/randomPhotos/randomPhoto2.jpg'
+import randomPhoto3 from '../../assets/randomPhotos/randomPhoto3.jpg'
+import randomPhoto4 from '../../assets/randomPhotos/randomPhoto4.jpg'
+import randomPhoto5 from '../../assets/randomPhotos/randomPhoto5.jpg'
+import randomPhoto6 from '../../assets/randomPhotos/randomPhoto6.jpg'
+import randomPhoto7 from '../../assets/randomPhotos/randomPhoto7.jpg'
+import randomPhoto8 from '../../assets/randomPhotos/randomPhoto8.jpg'
+import randomPhoto9 from '../../assets/randomPhotos/randomPhoto9.jpg'
+import randomPhoto10 from '../../assets/randomPhotos/randomPhoto10.jpg'
+
+
+
 import React from 'react'
 import us from './Users.module.css'
-import userPhoto from '../../assets/img/usersAvaAlexey.jpg'
 import classNames from 'classnames'
 import {NavLink} from 'react-router-dom'
 
 
 export const Users = (props) => {
+
+    let randomPhotos = [
+        randomPhoto1,randomPhoto6,
+        randomPhoto2,randomPhoto7,
+        randomPhoto3,randomPhoto8,
+        randomPhoto4,randomPhoto9,
+        randomPhoto5,randomPhoto10,
+    ]
+
+    const getRandomInt = (max) => {
+        return Math.floor(Math.random() * Math.floor(max))
+    }
+
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
 
@@ -46,7 +71,7 @@ export const Users = (props) => {
             props.users.map(u => <div key={u.id}>
                 <div className={us.block}>
                     <div className={us.block__info}>
-                         <NavLink to={'/profile/' + u.id }><img className={us.usersPhoto} alt={`logo`} src={u.photos.small != null ? u.photos.small : userPhoto  }/> </NavLink>
+                         <NavLink to={'/profile/' + u.id }><img className={us.usersPhoto} alt={`logo`} src={u.photos.small != null ? u.photos.small : randomPhotos[getRandomInt(10)]  }/> </NavLink>
                         <div className={us.info}>
                             <p>{`Имя: ${u.name}`}<br/> {u.status != null ? u.status : `Люблю пельмешки`}</p>
                             <p>{'Прекрасная страна'}, {'Лучший город'} </p>
