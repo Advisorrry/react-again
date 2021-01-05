@@ -28,8 +28,8 @@ export const profileReducer = (state = initialState, action) => {
             }
             return  {
                 ...state,
-                myPostData: [state.myPostData, newPost],
-                newPostText: ''
+                newPostText: '',
+                myPostData: [...state.myPostData, newPost],
             }
 
         }

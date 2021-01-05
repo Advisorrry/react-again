@@ -6,6 +6,7 @@
 .info img {
     width: 150px;
     border-radius: 10%;
+    margin-bottom: 1rem;
 }
 
 .photo {
@@ -18,6 +19,13 @@
 
 .list {
     list-style-type: none;
+}
+
+.status__input {
+    width: 150px;
+}
+.span__status {
+    cursor: pointer;
 }
 
 
