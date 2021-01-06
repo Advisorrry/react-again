@@ -22,7 +22,7 @@
 }
 
 .status__input {
-    width: 150px;
+    min-width: 150px;
 }
 .span__status {
     cursor: pointer;
