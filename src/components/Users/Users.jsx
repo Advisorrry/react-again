@@ -53,15 +53,14 @@ export const Users = (props) => {
     return <div>
         <div className={us.numbers__button}>
             {
-
-                pages.map(pageNumber => {
-                    if ((pageNumber < now + 3 && pageNumber > now - 3) ||
-                        pageNumber === 1 || pageNumber === pages.length
+                pages.map(p => {
+                    if ((p < now + 3 && p > now - 3) ||
+                        p === 1 || p === pages.length
                     ) {
-                        return <span key={pageNumber}
-                                     className={setPaginationBtnClasses(pageNumber, now > pageNumber + 3, pageNumber === pages.length && (now < pageNumber - 4) )}
-                                     onClick={() => { props.onPageChanged(pageNumber) }}
-                        >{pageNumber}</span>
+                        return <span key={p}
+                                     className={setPaginationBtnClasses(p, now > p + 3, p === pages.length && (now < p - 4) )}
+                                     onClick={() => { props.onPageChanged(p) }}
+                        >{p}</span>
                     } return ''
 
                 })}
