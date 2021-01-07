@@ -10,7 +10,7 @@ const TOGGLE_IS_PRESSED = 'TOGGLE_IS_PRESSED'
 
 const initialState = {
     users: [],
-    pageSize: 6,
+    pageSize: 5,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,

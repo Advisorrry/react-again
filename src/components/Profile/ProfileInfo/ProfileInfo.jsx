@@ -2,7 +2,7 @@ import React from 'react'
 import {Preloader} from '../../common/Preloader'
 import c from './ProfileInfo.module.css'
 import defaultPhoto from '../../../assets/img/ava.jpg'
-import {ProfileStatus} from './ProfileStatus'
+import {ProfileStatus} from './ProfileStatusHook'
 
 
 export const ProfileInfo = (props) => {
@@ -14,6 +14,7 @@ export const ProfileInfo = (props) => {
         <div>
             <div>
                 <div className={c.info}>
+
                     <img src={props.profile.photos.large != null ? props.profile.photos.large : defaultPhoto} alt=""/>
                     <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus}/>
                     <ul className={c.list}>
