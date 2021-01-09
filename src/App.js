@@ -6,7 +6,7 @@ import {Route, BrowserRouter} from 'react-router-dom'
 import UsersContainer from './components/Users/UsersContainer'
 import ProfileContainer from './components/Profile/ProfileContainer'
 import NavbarContainer from './components/Navbar/NavbarContainer'
-import {Login} from './components/Login/Login'
+import Login from './components/Login/Login'
 
 
 
