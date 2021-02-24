@@ -3,7 +3,7 @@ import c from './ProfileInfo.module.css'
 
 
 
-export class ProfileStatus extends React.Component {
+class ProfileStatus extends React.Component {
     state = {
         editMode: false,
         status: this.props.status

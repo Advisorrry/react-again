@@ -2,7 +2,7 @@ import React from 'react'
 import {Preloader} from '../../common/Preloader'
 import c from './ProfileInfo.module.css'
 import defaultPhoto from '../../../assets/img/ava.jpg'
-import {ProfileStatus} from './ProfileStatus'
+import {ProfileStatus} from './ProfileStatusHook'
 
 
 export const ProfileInfo = (props) => {

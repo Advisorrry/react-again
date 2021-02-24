@@ -1,13 +1,12 @@
-import {sendMessageCreator, updateNewMessageBodyCreator} from '../../redux/store'
-import {Dialogs} from './Dialogs'
-import {connect} from 'react-redux'
-import {withAuthRedirect} from '../../hoc/withAuthRedirect'
-import {compose} from 'redux'
-
+import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/store'
+import { Dialogs } from './Dialogs'
+import { connect } from 'react-redux'
+import { withAuthRedirect } from '../../hoc/withAuthRedirect'
+import { compose } from 'redux'
 
 const mapStateToProps = (state) => {
     return {
-        dialogsPage: state.dialogsPage
+        dialogsPage: state.dialogsPage,
     }
 }
 
@@ -18,13 +17,11 @@ const mapDispatchToProps = (dispatch) => {
         },
         sendMessage: () => {
             dispatch(sendMessageCreator())
-        }
-
+        },
     }
 }
 
-export const DialogsContainer = compose(connect(mapStateToProps, mapDispatchToProps), withAuthRedirect) (Dialogs)
-
-
-
-
+export const DialogsContainer = compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withAuthRedirect,
+)(Dialogs)

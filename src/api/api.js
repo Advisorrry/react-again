@@ -28,11 +28,7 @@ export const usersAPI = {
             .then(response => {
                 return response.data
             })
-    },
-    getAuth() {
-        return  instance.get(`auth/me`)
-
-    },
+    }
 }
 
 export const profileAPI = {
@@ -48,6 +44,22 @@ export const profileAPI = {
             status: status
         })
     }
+}
 
+export const authAPI = {
+    getAuth() {
+        return  instance.get(`auth/me`)
+    },
+    postAuth(email, password, rememberMe=false) {
+        return instance.post(`auth/login`, {
+            email, password, rememberMe
+        })
+    },
+    deleteAuth() {
+        return instance.delete(`auth/login`)
+        .then(response => {
+                return response.data
+            })
+    }
 }
 
