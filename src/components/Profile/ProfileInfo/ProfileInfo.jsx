@@ -14,7 +14,6 @@ export const ProfileInfo = (props) => {
         <div>
             <div>
                 <div className={c.info}>
-
                     <img src={props.profile.photos.large != null ? props.profile.photos.large : defaultPhoto} alt=""/>
                     <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus}/>
                     <ul className={c.list}>
